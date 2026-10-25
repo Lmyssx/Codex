@@ -1,0 +1,17 @@
+{
+  "artifacts": {
+    "step6_recursive_bayes_code.zip": {
+      "bytes": 53126,
+      "sha256": "cab28620ad7af9314c088a0f4843bdf2cb114f45401d59b82dbfc874c43274c5",
+      "file_count": 28
+    },
+    "step6_recursive_bayes_evidence.zip": {
+      "bytes": 5908072,
+      "sha256": "08e7771ca3390ed64fb76e0f314c72ede175bf60318f4b4aa4329c0afbe06a15",
+      "file_count": 191
+    }
+  },
+  "project_root": "/workspace/work/project",
+  "tests": "27 passed",
+  "designated_output_directory_unavailable": "/codex parent is not writable in this managed environment; archives retained in shared workspace, no public upload"
+}

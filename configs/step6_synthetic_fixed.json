@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "seed": 20260615,
+  "data": {
+    "observations_root": "Step5_observations/observations",
+    "raw_root": "dataset",
+    "empty_subdir": "2-307-\u7a7a\u573a"
+  },
+  "materials": {
+    "ascii_path": "Thermal_dielectric_acoustic_MR properties_database_V5.0(ASCII).txt",
+    "mode": "fixed",
+    "u_eps_sd": 0.1,
+    "u_loss_sd": 0.2,
+    "demo_fallback": false
+  },
+  "model": {
+    "observation_operator": "step5_gate_fft",
+    "projection": "gate_qr",
+    "g_air_mm": 0,
+    "g_source": "synthetic_known",
+    "linear_convolution_factor": 8,
+    "d_skin_bounds_mm": [
+      0.5,
+      3.5
+    ],
+    "d_fat_bounds_mm": [
+      1.0,
+      60.0
+    ]
+  },
+  "calibration": {
+    "path": null,
+    "require_for_real_inference": true,
+    "allow_blind_waveform": false
+  },
+  "sampler": {
+    "method": "slice_gibbs_pt",
+    "independent_ensembles": 4,
+    "n_temperatures": 4,
+    "max_temperature": 40.0,
+    "warmup": 400,
+    "draws": 1400,
+    "widths": [
+      0.02,
+      0.2,
+      0.05,
+      0.1,
+      1.0
+    ],
+    "use_map_mixture": true,
+    "global_every": 5
+  },
+  "synthetic": {
+    "truth": [
+      1.5,
+      15.0
+    ],
+    "windows": 3,
+    "sigma": 0.003
+  },
+  "grid_shape": [
+    19,
+    80
+  ],
+  "output_root": "results_step6_recursive",
+  "noise": {
+    "alpha0": 3.0,
+    "beta0": 2.0,
+    "validated_repeat_structure": false
+  }
+}
